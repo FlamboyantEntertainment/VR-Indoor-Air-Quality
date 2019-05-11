@@ -39,23 +39,14 @@ public class VideoPlayerPlay : MonoBehaviour
             if (issues != issueIcon)
             {
                 issues.GetComponent<SphereCollider>().enabled = false;
-                //issues.SetActive(false);
+
             }
            
         }
 
         homeButton.GetComponent<SphereCollider>().enabled = false;
         trophyButton.GetComponent<SphereCollider>().enabled = false;
-        // Completed dont need to be hidden if it's not clickable. So I'll comment it out
-        //foreach (GameObject issueC in issueCompleted)
-        // {
-        //  if (issueC != issueIcon)
-        // {
-        //issueC.GetComponent<SphereCollider>().enabled = false;
-        //issueC.SetActive(false);
-        //  }
 
-        // }
         isPlaying = false;
     }
 
@@ -63,7 +54,7 @@ public class VideoPlayerPlay : MonoBehaviour
     {
         Debug.Log("Video is done.");
         issueIcon.SetActive(false);
-        //sphereCollider.enabled = true;
+
         foreach (GameObject issues in issuesDisable)
         {
             if (issues != issueIcon)
@@ -73,20 +64,8 @@ public class VideoPlayerPlay : MonoBehaviour
             }
 
         }
-
         homeButton.GetComponent<SphereCollider>().enabled = true;
         trophyButton.GetComponent<SphereCollider>().enabled = true;
-
-        //if (issueCompleted != null)
-        //foreach (GameObject issueC in issueCompleted)
-        //{
-        //if (issueC != issueIcon)
-        // {
-        //    issueC.SetActive(true);
-        //}
-
-        // }
-
 
     }
 
@@ -105,17 +84,7 @@ public class VideoPlayerPlay : MonoBehaviour
 
        }
     }
-    private void HandleOut()
-    {
-      
-    }
 
-    // Use this for initialization
-    void Start()
-    {
-        // if (audioSource != null)
-        // audioSource.clip = audioClip;
 
-    }
 }
 

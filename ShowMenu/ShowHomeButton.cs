@@ -71,6 +71,7 @@ public class ShowHomeButton : MonoBehaviour
             //else
            // {
                 showMenu.SetActive(true);
+            ShowStatus.CloseStatus();
             //}
 
             //Debug.Log(isEntrance.position);
